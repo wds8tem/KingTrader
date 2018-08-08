@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">KingTrader</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="search_comment">종목명/종목코드/초성/심볼로 검색하세요.</string>
+
+    <string name="cd_item_delete_button">Delete item</string>
+
+    <string name="home_edit_subject">편집</string>
+    <string name="home_add_subject">종목추가</string>
+    <string name="home_sort_subject">정렬</string>
+    <string name="home_inter_sub_sort_subject">관심종목 정렬</string>
+
+    <string name="home_my_profits_ratio">수익률</string>
+    <string name="home_my_profits_price">수익금</string>
+
+    <string name="login_id_title">아이디</string>
+    <string name="login_passwd_title">비밀번호</string>
+    <string name="login_cert_title">인증서</string>
+    <string name="login_cert_passwd_title">공인인증</string>
+
+    <string name="login_using_cert_only_title">인증서만으로 로그인</string>
+    <string name="login_mock_title">모의투자</string>
+
+    <string name="intro_title">TRADE KING</string>
+
+    <string name="login_start">로그인</string>
+    <string name="login_cancel">취소</string>
+
+    <string name="edit_inter_group_title">&lt; 관심그룹 편집</string>
+    <string name="add_inter_sub_title">&lt; 관심종목 추가</string>
+    <string name="add_inter_sub_complete">완 료</string>
+
+    <string name="inter_group_edit_select_all">전체선택</string>
+    <string name="inter_group_edit_delete">삭제</string>
+    <string name="inter_group_edit_move">그룹이동</string>
+    <string name="inter_group_edit_complete">완 료</string>
+
+    <string name="inter_sub_edit_select_all">전체선택</string>
+    <string name="inter_sub_edit_delete">삭제</string>
+    <string name="inter_sub_edit_complete">완 료</string>
+
+    <string name="add_inter_sub_sel_title">선택한 종목</string>
+
+    <string name="msg_request_permission">권한 설정을 해주세요.</string>
+
+    <string name="msg_session_connection">서버 접속 시작.</string>
+    <string name="msg_library_version_check">라이브러리 버젼체크 완료.</string>
+    <string name="msg_master_file_download">Master 파일 DownLoad...</string>
+    <string name="msg_master_file_loading">Master 파일 Loading...</string>
+    <string name="msg_session_reconnection">재접속 되었습니다.</string>
+    <string name="msg_on_login">로그인 중 입니다.</string>
+    <string name="msg_login_success">로그인 성공</string>
+
+    <string name="msg_finish_app">Back 버튼을 한번 더 누르시면 앱이 종료됩니다.</string>
+
+    <string name="inter_group_inter_sub_edit">관심종목 편집</string>
+    <string name="inter_group_edit">그룹 편집</string>
+
+    <string name="select_interested_group">관심그룹 선택</string>
+    <string name="cancel">취소</string>
+    <string name="current_selected_group">현재그룹</string>
+
+    <string name="interested_group">관심그룹</string>
+    <string name="add_interested_group">그룹추가</string>
+
+    <string name="need_to_add_group">그룹을 추가해주세요.</string>
+    <string name="need_to_input_group_name">관심그룹의 이름을 입력해 주세요.</string>
+    <string name="check">확인</string>
+
+    <string name="stock_price_tran">주식현재가</string>
+    <string name="stock_hoga_tran">주식호가</string>
+    <string name="stock_price_real">주식현재가실시간</string>
+    <string name="stock_hoga_real">주식호가실시간</string>
+    <string name="stock_buy_request">주식매수주문</string>
+    <string name="stock_sell_request">주식매도주문</string>
+    <string name="stock_modify_request">주식정정주문</string>
+    <string name="stock_cancel_request">주식주문취소</string>
+
+    <string name="stock_order_price">단가</string>
+    <string name="stock_order_count">수량</string>
+    <string name="stock_order_number">주문번호</string>
+    <string name="stock_order_total_price">주문총액</string>
+    <string name="stock_order_buy">매수</string>
+    <string name="stock_order_sell">매도</string>
+    <string name="stock_order_modify">정정</string>
+    <string name="stock_order_cancel">취소</string>
+
+    <string name="stock_account_check_complete">계좌 비밀번호 체크 완료</string>
+
+    <string name="stock_my_account">보유계좌</string>
+
+    <string name="subject">종목</string>
+    <string name="my_ratio_of_return_note">수익노트</string>
+    <string name="profit_price">수익금</string>
+    <string name="profit_ratio">수익률</string>
+    <string name="holding_period">보유일</string>
+    <string name="total_buy_price">매수금</string>
+    <string name="buy_price">매수가</string>
+    <string name="buy_count">수량</string>
+
+    <string name="modify">수정</string>
+    <string name="remove">삭제</string>
+
+    <string name="input_buy">매수입력</string>
+
+    <string name="login_check_id">아이디를 확인하세요.</string>
+    <string name="login_check_password">비밀번호를 확인하세요.</string>
+    <string name="login_check_cert">공인인증서를 선택하세요.</string>
+    <string name="login_check_cert_password">공인인증 비밀번호를 확인하세요.</string>
+</resources>

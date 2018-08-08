@@ -1,0 +1,50 @@
+BEGIN_FUNCTION_MAP
+	.Feed,HYUN_SISE,AUTO11,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20151211,MODIFYER=NONE;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, string, 6, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목코드, jongcode, jongcode, string, 6, 0, 0, 0, , , ;
+		시세급변, sisegubun, sisegubun, string, 1, 0, 0, 0, , , ;
+		상하한가근접구분, updowngubun, updowngubun, string, 1, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , attr, ;
+		시가, startjuka, startjuka, long, 4, 0, 0, 0, , attr, ;
+		고가, highjuka, highjuka, long, 4, 0, 0, 0, , attr, ;
+		저가, lowjuka, lowjuka, long, 4, 0, 0, 0, , attr, ;
+		매도호가, medohoka, medohoka, long, 4, 0, 0, 0, , attr, ;
+		매수호가, mesuhoka, mesuhoka, long, 4, 0, 0, 0, , attr, ;
+		4bytes맞추기위해, FILLER1, FILLER1, string, 2, 0, 0, 0, , , ;
+		누적거래량_주단위, volume, volume, long, 4, 0, 0, 0, , , ;
+		누적거래대금_천단위, money, money, long, 4, 0, 0, 0, , , ;
+		등락률, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		시간_HH:SS, time, time, string, 5, 0, 0, 0, , , ;
+		고가시간, hightime, hightime, string, 5, 0, 0, 0, , , ;
+		저가시간, lowtime, lowtime, string, 5, 0, 0, 0, , , ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		직전체결량, nowvol, nowvol, long, 4, 0, 0, 0, , attr, ;
+		시세급변_초, sisesec, sisesec, string, 1, 0, 0, 0, , , ;
+		시세급변_등락률, siserate, siserate, short, 2, 0, 0, 0, , , ;
+		직전거래대금, nowmoney, nowmoney, long, 4, 0, 0, 0, , , ;
+		체결가, chejuka, chejuka, long, 4, 0, 0, 0, , , ;
+		체결가전일대비, chedebi, chedebi, long, 4, 0, 0, 0, , attr, ;
+		장구분, jang, jang, string, 1, 0, 0, 0, , , ;
+		상한가근접_구분값, updownflag, updownflag, string, 1, 0, 0, 0, , , ;
+		4bytes맞추기위해, FILLER2, FILLER2, string, 1, 0, 0, 0, , , ;
+		시간2, time2, time2, string, 8, 0, 0, 0, , , ;
+		체결강도, chegyulrate, chegyulrate, float, 4, 0, 0, 0, , , ;
+		매수체결합, mesusumvolume, mesusumvolume, long, 4, 0, 0, 0, , , ;
+		매도체결합, medosumvolume, medosumvolume, long, 4, 0, 0, 0, , , ;
+		상한가, upjuka, upjuka, long, 4, 0, 0, 0, , attr, ;
+		하한가, downjuka, downjuka, long, 4, 0, 0, 0, , attr, ;
+		4bytes맞추기위해, FILLER3, FILLER3, string, 2, 0, 0, 0, , , ;
+		전일동시간거래량, befminvol, befminvol, long, 4, 0, 0, 0, , , ;
+		전일동시간대비, befmindebi, befmindebi, long, 4, 0, 0, 0, , , ;
+		시가등략율, startdebirate, startdebirate, float, 4, 0, 0, 0, , , ;
+		고가등략율, highdebirate, highdebirate, float, 4, 0, 0, 0, , , ;
+		저가등략율, lowdebirate, lowdebirate, float, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

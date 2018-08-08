@@ -1,0 +1,47 @@
+BEGIN_FUNCTION_MAP
+	.Feed,HYUN_HOKA,AUTO12,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=남경아,MODDATE=20151211;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, string, 6, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목코드, jongcode, jongcode, string, 6, 0, 0, 0, , , ;
+		4bytes맞추기위해__단일가매매임, garbage, garbage, string, 2, 0, 0, 0, , , ;
+		누적거래량_주단위, volume, volume, long, 4, 0, 0, 0, , , ;
+		최우선매도호가, medohoka, medohoka, long, 4, 0, 0, 0, , attr, ;
+		최우선매수호가, mesuhoka, mesuhoka, long, 4, 0, 0, 0, , attr, ;
+		4bytes맞추기위해, FILLER, FILLER, string, 2, 0, 0, 0, , , ;
+		최우선매도잔량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		최우선매수잔량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs=10;
+	begin
+		매도호가, medohoka, medohoka, long, 4, 0, 0, 0, , attr, ;
+		매수호가, mesuhoka, mesuhoka, long, 4, 0, 0, 0, , attr, ;
+		4bytes맞추기위해, FILLER, FILLER, string, 2, 0, 0, 0, , , ;
+		매도잔량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		매수잔량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+		매도이전대비, medodebi, medodebi, long, 4, 0, 0, 0, , , ;
+		매수이전대비, mesudebi, mesudebi, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output;
+	begin
+		매도총잔량, medotot, medotot, long, 4, 0, 0, 0, , , ;
+		매수총잔량, mesutot, mesutot, long, 4, 0, 0, 0, , , ;
+		시간외매도총잔량, medototto, medototto, long, 4, 0, 0, 0, , , ;
+		시간외매수총잔량, mesutotto, mesutotto, long, 4, 0, 0, 0, , , ;
+		매수총잔량-매도총잔량, diffmesumedo, diffmesumedo, long, 4, 0, 0, 0, , , ;
+		매도이전대비합, medodebitot, medodebitot, long, 4, 0, 0, 0, , , ;
+		매수이전대비합, mesudebitot, mesudebitot, long, 4, 0, 0, 0, , , ;
+		동시구분, dongsigubun, dongsigubun, long, 4, 0, 0, 0, , , ;
+		예상체결가격, expectjuka, expectjuka, long, 4, 0, 0, 0, , , ;
+		예상체결수량, expectvol, expectvol, long, 4, 0, 0, 0, , , ;
+		예상체결등락율, expectrate, expectrate, float, 4, 0, 0, 0, , , ;
+		예상체결대비, expectdebi, expectdebi, long, 4, 0, 0, 0, , attr, ;
+		호가시간, time, time, string, 8, 0, 0, 0, , , ;
+		단일가매매임의종료, RandomClose, RandomClose, string, 12, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

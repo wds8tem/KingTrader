@@ -1,0 +1,74 @@
+BEGIN_FUNCTION_MAP
+	.DSO,후강통_PRICETABLE,DSO740100,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=김운용,MODDATE=20161209;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		시장구분, jang, jang, long, 4, 0, 0, 0, , , ;
+		실시간지연시세여부, delay, delay, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목이름, jongname, jongname, varstring, 64, 0, 0, 0, , , ;
+		현재가, curprice, curprice, float, 4, 0, 0, 0, , attr, ;
+		전일대비, debi, debi, float, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+		거래대금, money, money, double, 8, 0, 0, 0, , , ;
+		시가, startprice, startprice, float, 4, 0, 0, 0, , attr, ;
+		고가, highprice, highprice, float, 4, 0, 0, 0, , attr, ;
+		저가, lowprice, lowprice, float, 4, 0, 0, 0, , attr, ;
+		상한가, upprice, upprice, float, 4, 0, 0, 0, , attr, ;
+		하한가, downprice, downprice, float, 4, 0, 0, 0, , attr, ;
+		액면가, faceprice, faceprice, float, 4, 0, 0, 0, , , ;
+		기준가, standardprice, standardprice, float, 4, 0, 0, 0, , , ;
+		상장주식수, cntstocks, cntstocks, long, 4, 0, 0, 0, , , ;
+		자본금, capmoney, capmoney, double, 8, 0, 0, 0, , , ;
+		PER, per, per, float, 4, 0, 0, 0, , , ;
+		52주최고가, highprice_52w, highprice_52w, float, 4, 0, 0, 0, , , ;
+		52주최저가, lowprice_52w, lowprice_52w, float, 4, 0, 0, 0, , , ;
+		2차저항, res2, res2, float, 4, 0, 0, 0, , , ;
+		1차저항, res1, res1, float, 4, 0, 0, 0, , , ;
+		피봇, pivot, pivot, float, 4, 0, 0, 0, , , ;
+		1차지지, sup1, sup1, float, 4, 0, 0, 0, , , ;
+		2차지지, sup2, sup2, float, 4, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		체결시간, time, time, varstring, 8, 0, 0, 0, , , ;
+		현재가, curprice, curprice, float, 4, 0, 0, 0, , , ;
+		전일대비, debi, debi, float, 4, 0, 0, 0, , attr, ;
+		체결량, nowvol, nowvol, long, 4, 0, 0, 0, , attr, ;
+	end
+	OutBlock3, OutBlock3, output, occurs;
+	begin
+		매도호가, medoprice, medoprice, float, 4, 0, 0, 0, , attr, ;
+		매도호가잔량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		매도호가건수, medocount, medocount, long, 4, 0, 0, 0, , , ;
+		매수호가, mesuprice, mesuprice, float, 4, 0, 0, 0, , attr, ;
+		매수호가잔량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+		매수호가건수, mesucount, mesucount, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock4, OutBlock4, output;
+	begin
+		매도총잔량, totmedovol, totmedovol, long, 4, 0, 0, 0, , , ;
+		매수총잔량, totmesuvol, totmesuvol, long, 4, 0, 0, 0, , , ;
+		매도총건수, totmedocount, totmedocount, long, 4, 0, 0, 0, , , ;
+		매수총건수, totmesucount, totmesucount, long, 4, 0, 0, 0, , , ;
+		호가시간, hokatime, hokatime, varstring, 8, 0, 0, 0, , , ;
+		전일시가, prevstartprice, prevstartprice, float, 4, 0, 0, 0, , , ;
+		전일고가, prevhighprice, prevhighprice, float, 4, 0, 0, 0, , , ;
+		전일저가, prevlowprice, prevlowprice, float, 4, 0, 0, 0, , , ;
+		전일종가, prevlastprice, prevlastprice, float, 4, 0, 0, 0, , , ;
+		시가총액, sichong, sichong, double, 8, 0, 0, 0, , , ;
+		주문단위, memeunit, memeunit, long, 4, 0, 0, 0, , , ;
+		외환코드, currency, currency, varstring, 4, 0, 0, 0, , , ;
+		예상체결가, expectprice, expectprice, float, 4, 0, 0, 0, , , ;
+		예상수량, expectvol, expectvol, long, 4, 0, 0, 0, , , ;
+		PER2, per2, per2, float, 4, 0, 0, 0, , , ;
+		PBR, pbr, pbr, float, 4, 0, 0, 0, , , ;
+		ROE, roe, roe, float, 4, 0, 0, 0, , , ;
+		ROA, roa, roa, float, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

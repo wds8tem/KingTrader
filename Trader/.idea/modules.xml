@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../SmartNetAPI/SmartNetAPI.iml" filepath="$PROJECT_DIR$/../SmartNetAPI/SmartNetAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SmartNetLib/SmartNetLib.iml" filepath="$PROJECT_DIR$/../SmartNetLib/SmartNetLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SmartNetMngLibrary.iml" filepath="$PROJECT_DIR$/../SmartNetMngLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SmartNetSample.iml" filepath="$PROJECT_DIR$/SmartNetSample.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,36 @@
+BEGIN_FUNCTION_MAP
+	.Feed,HUGANG_HOKA,AUTO4C,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20151211,MODIFYER=NONE;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, string, 12, 1, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목코드, jongcode, jongcode, string, 12, 1, 0, 0, , , ;
+		최우선매도호가, medoprice, medoprice, float, 4, 0, 0, 0, , attr, ;
+		최우선매수호가, mesuprice, mesuprice, float, 4, 0, 0, 0, , attr, ;
+		FILLER, FILLER, FILLER, string, 2, 0, 0, 0, , , ;
+		최우선매도잔량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		최우선매수잔량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs=10;
+	begin
+		매도호가, medoprice, medoprice, float, 4, 0, 0, 0, , attr, ;
+		매수호가, mesuprice, mesuprice, float, 4, 0, 0, 0, , attr, ;
+		FILLER, FILLER, FILLER, string, 2, 0, 0, 0, , , ;
+		매도잔량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		매수잔량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+		매도건수, medocount, medocount, long, 4, 0, 0, 0, , , ;
+		매수건수, mesucount, mesucount, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output;
+	begin
+		매도총잔량, totmedovol, totmedovol, long, 4, 0, 0, 0, , , ;
+		매수총잔량, totmesuvol, totmesuvol, long, 4, 0, 0, 0, , , ;
+		매도총건수, totmedocount, totmedocount, long, 4, 0, 0, 0, , , ;
+		매수총건수, totmesucount, totmesucount, long, 4, 0, 0, 0, , , ;
+		호가시간, time, time, string, 8, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

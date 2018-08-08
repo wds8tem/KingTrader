@@ -1,0 +1,19 @@
+BEGIN_FUNCTION_MAP
+	.DSO,해외주식정정주문,DSO750003,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=남경아,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		계좌식별번호, acnt_aid, acnt_aid, varstring, 15, 3, 0, 0, , , ;
+		사용자구분, user_gubun, user_gubun, varstring, 1, 0, 73, 0, , , ;
+		비밀번호, passwd, passwd, varstring, 100, 4, 0, 0, , , ;
+		원주문번호, org_order_no, org_order_no, varstring, 7, 0, 0, 0, , , ;
+		주문수량, order_cnt, order_cnt, double, 8, 0, 0, 0, , , ;
+		주문가격, order_price, order_price, double, 8, 0, 0, 0, , , ;
+		주문일자, order_date, order_date, varstring, 8, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		메세지, msg, msg, varstring, 1000, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

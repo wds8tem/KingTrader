@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/home_inter_sub_title"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/home_interested_subject_diff_ratio_shape_empty"
+            >
+            <TextView
+                android:id="@+id/home_inter_sub_cur_price_border"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_margin="5dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/home_inter_sub_cur_price"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_margin="5dp"
+                android:gravity="center" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/home_interested_subject_diff_ratio_shape_empty"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@id/home_inter_sub_today_diff_price" />
+
+        <TextView
+            android:id="@+id/home_inter_sub_today_diff_price"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/home_inter_sub_my_diff_ratio"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/home_inter_sub_my_diff_price"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/home_inter_sub_my_diff_ratio"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/home_inter_sub_today_volume"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@id/home_inter_sub_diff_ratio_shape"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/home_inter_sub_diff_ratio_shape"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@id/home_inter_sub_today_diff_ratio" />
+
+        <TextView
+            android:id="@+id/home_inter_sub_today_diff_ratio"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/home_inter_sub_my_volume"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/home_inter_sub_my_avg_price"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/home_inter_sub_my_volume"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>
+

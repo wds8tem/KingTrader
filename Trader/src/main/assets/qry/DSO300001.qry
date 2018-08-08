@@ -1,0 +1,117 @@
+BEGIN_FUNCTION_MAP
+	.DSO,주식현재가,DSO300001,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001;
+	BEGIN_DATA_MAP
+	InBlock1, , input;
+	begin
+		장내외구분, jang, jang, byte, 1, 0, 0, 0, , , ;
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		단일가여부_Y_N, outflag, outflag, varstring, 1, 0, 0, 0, , , ;
+		거래원수량_대금_평균, tsflag, tsflag, varstring, 1, 0, 0, 0, , , ;
+	end
+	OutBlock1, , output;
+	begin
+		종목이름, jongname, jongname, varstring, 20, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , attr, ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		업종이름, upname, upname, varstring, 20, 0, 0, 0, , , ;
+		부이름, buname, buname, varstring, 20, 0, 0, 0, , , ;
+		자본금구분, cap, cap, varstring, 4, 0, 0, 0, , , ;
+		코스피구분, kospi, kospi, varstring, 8, 0, 0, 0, , , ;
+		신용구분, credit, credit, varstring, 26, 0, 0, 0, , , ;
+		미수제한여부, misuinfo, misuinfo, varstring, 15, 0, 0, 0, , , ;
+		거래량, volume, volume, long, 4, 0, 0, 0, , , ;
+		전일종가, prevlastjuka, prevlastjuka, long, 4, 0, 0, 0, , , ;
+		전일거래량, prevvolume, prevvolume, long, 4, 0, 0, 0, , , ;
+		전일동시간대거래량, befminvol, befminvol, long, 4, 0, 0, 0, , , ;
+		전일동시간대거래양, beftime, beftime, varstring, 5, 0, 0, 0, , , ;
+		거래대금, money, money, long, 4, 0, 0, 0, , , ;
+		시가, startjuka, startjuka, long, 4, 0, 0, 0, , attr, ;
+		시가등락율, startdebirate, startdebirate, float, 4, 0, 0, 0, , , ;
+		고가, highjuka, highjuka, long, 4, 0, 0, 0, , attr, ;
+		고가등락율, highdebirate, highdebirate, float, 4, 0, 0, 0, , , ;
+		저가, lowjuka, lowjuka, long, 4, 0, 0, 0, , attr, ;
+		저가등락율, lowdebirate, lowdebirate, float, 4, 0, 0, 0, , , ;
+		고가시간, hightime, hightime, varstring, 5, 0, 0, 0, , , ;
+		저가시간, lowtime, lowtime, varstring, 5, 0, 0, 0, , , ;
+		상한가, upjuka, upjuka, long, 4, 0, 0, 0, , attr, ;
+		하한가, downjuka, downjuka, long, 4, 0, 0, 0, , attr, ;
+		매도호가, medohoka, medohoka, long, 4, 0, 0, 0, , attr, ;
+		매수호가, mesuhoka, mesuhoka, long, 4, 0, 0, 0, , attr, ;
+		액면가, facejuka, facejuka, long, 4, 0, 0, 0, , , ;
+		기준가, standardjuka, standardjuka, long, 4, 0, 0, 0, , , ;
+		권배락구분, kwunbae, kwunbae, varstring, 15, 0, 0, 0, , , ;
+		대용가, replacejuka, replacejuka, long, 4, 0, 0, 0, , , ;
+		외국인보유량, forevol, forevol, long, 4, 0, 0, 0, , , ;
+		외국인보유율, forerate, forerate, float, 4, 0, 0, 0, , , ;
+		외국인증감당일, foretoday, foretoday, long, 4, 0, 0, 0, , , ;
+		외국인증감전일, forebefore, forebefore, long, 4, 0, 0, 0, , , ;
+		결산월, closemonth, closemonth, long, 4, 0, 0, 0, , , ;
+		상장주식수, cntstocks, cntstocks, long, 4, 0, 0, 0, , , ;
+		자본금, capmoney, capmoney, long, 4, 0, 0, 0, , , ;
+		PER, per, per, float, 4, 0, 0, 0, , , ;
+		정리매매여부, closememe, closememe, varstring, 12, 0, 0, 0, , , ;
+		매매수량단위, memesu, memesu, long, 4, 0, 0, 0, , , ;
+		대주잔고율, rentrestrate, rentrestrate, float, 4, 0, 0, 0, , , ;
+		융자잔고율, creditrestrate, creditrestrate, float, 4, 0, 0, 0, , , ;
+		등록주선사, securities, securities, varstring, 3, 0, 0, 0, , , ;
+		등록일, registerday, registerday, varstring, 10, 0, 0, 0, , , ;
+		회전율, monrate, monrate, float, 4, 0, 0, 0, , , ;
+	end
+	OutBlock2, , output, occurs=1;
+	begin
+		최고가, highjuka, highjuka, long, 4, 0, 0, 0, , , ;
+		최고가일, highjukaday, highjukaday, varstring, 7, 0, 0, 0, , , ;
+		최저가, lowjuka, lowjuka, long, 4, 0, 0, 0, , , ;
+		최저가일, lowjukaday, lowjukaday, varstring, 7, 0, 0, 0, , , ;
+	end
+	OutBlock3, , output, occurs=1;
+	begin
+		매도회원사, medocomno, medocomno, varstring, 3, 0, 0, 0, , , ;
+		매도수량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		매수회원사, mesucomno, mesucomno, varstring, 3, 0, 0, 0, , , ;
+		매수수량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock4, , output;
+	begin
+		현재가, ecncurjuka, ecncurjuka, long, 4, 0, 0, 0, , attr, ;
+		대비, ecndebi, ecndebi, long, 4, 0, 0, 0, , attr, ;
+		등락율, ecnrate, ecnrate, float, 4, 0, 0, 0, , , ;
+		거래량, ecnvolume, ecnvolume, long, 4, 0, 0, 0, , , ;
+		대금(천원), ecnmoney, ecnmoney, long, 4, 0, 0, 0, , , ;
+		시가, ecnstartjuka, ecnstartjuka, long, 4, 0, 0, 0, , attr, ;
+		고가, ecnhighjuka, ecnhighjuka, long, 4, 0, 0, 0, , attr, ;
+		저가, enclowjuka, enclowjuka, long, 4, 0, 0, 0, , attr, ;
+		외국인증감당일, foretoday2, foretoday2, double, 8, 0, 0, 0, , , ;
+		외국인증감전일, forebefore2, forebefore2, double, 8, 0, 0, 0, , , ;
+		2차저항, res2, res2, long, 4, 0, 0, 0, , , ;
+		1차저항, res1, res1, long, 4, 0, 0, 0, , , ;
+		피봇, pivot, pivot, long, 4, 0, 0, 0, , , ;
+		1차지지, sup1, sup1, long, 4, 0, 0, 0, , , ;
+		2차지지, sup2, sup2, long, 4, 0, 0, 0, , , ;
+		자사주구분, stockgubun, stockgubun, varstring, 29, 0, 0, 0, , , ;
+		자사주신청량, stockvolume, stockvolume, long, 4, 0, 0, 0, , , ;
+		자사주체결량, stockchevol, stockchevol, long, 4, 0, 0, 0, , , ;
+		제공일, supdate, supdate, long, 4, 0, 0, 0, , , ;
+		유동수량, flowstocks, flowstocks, long, 4, 0, 0, 0, , , ;
+		lp주문가능여부, lporder, lporder, varstring, 10, 0, 0, 0, , , ;
+		스프레드, spread, spread, float, 4, 0, 0, 0, , , ;
+		최소호가수량배수, minhokamulti, minhokamulti, long, 4, 0, 0, 0, , , ;
+		lp1, lpcode1, lpcode1, varstring, 3, 0, 0, 0, , , ;
+		lp2, lpcode2, lpcode2, varstring, 3, 0, 0, 0, , , ;
+		lp3, lpcode3, lpcode3, varstring, 3, 0, 0, 0, , , ;
+		lp4, lpcode4, lpcode4, varstring, 3, 0, 0, 0, , , ;
+		lp5, lpcode5, lpcode5, varstring, 3, 0, 0, 0, , , ;
+		우회상장여부, roundstock, roundstock, varstring, 20, 0, 0, 0, , , ;
+		공매도수량, sellvolume, sellvolume, long, 4, 0, 0, 0, , , ;
+		공매도대금, sellmoney, sellmoney, long, 4, 0, 0, 0, , , ;
+		대차가능여부, borrow, borrow, varstring, 6, 0, 0, 0, , , ;
+		공매도불가여부, presell, presell, varstring, 6, 0, 0, 0, , , ;
+		PBR, pbr, pbr, float, 4, 0, 0, 0, , , ;
+		EPS, eps, eps, long, 4, 0, 0, 0, , , ;
+		BPS, bps, bps, long, 4, 0, 0, 0, , , ;
+		업종코드, upcode, upcode, long, 4, 0, 0, 0, , , ;
+		대차잔고, loanvolume, loanvolume, double, 8, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

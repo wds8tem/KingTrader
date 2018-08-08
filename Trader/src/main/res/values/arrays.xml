@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="select_item_type">
+        <item >맨 위에 추가</item>
+        <item >맨 아래 추가</item>
+    </string-array>
+
+    <string-array name="sort_interest_item">
+        <item >정렬 안함</item>
+        <item >등락률</item>
+        <item >등락</item>
+        <item >거래대금</item>
+        <item >거래량</item>
+        <item >가격</item>
+        <item >수익율</item>
+        <item >수익금</item>
+        <item >매수금</item>
+    </string-array>
+</resources>

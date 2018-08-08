@@ -1,0 +1,55 @@
+BEGIN_FUNCTION_MAP
+	.DSO,주식현재가_호가체결,DSO300002,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=남경아,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		장내외구분, jang, jang, byte, 1, 0, 0, 0, , , ;
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		단일가여부_Y_N, outflag, outflag, varstring, 1, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output, occurs;
+	begin
+		매도호가, medohoka, medohoka, long, 4, 0, 0, 0, , attr, ;
+		매도잔량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		매수호가, mesuhoka, mesuhoka, long, 4, 0, 0, 0, , attr, ;
+		매수잔량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		매도호가, medohoka, medohoka, long, 4, 0, 0, 0, , attr, ;
+		매도잔량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		매수호가, mesuhoka, mesuhoka, long, 4, 0, 0, 0, , attr, ;
+		매수잔량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output, occurs;
+	begin
+		가격, hoka, hoka, long, 4, 0, 0, 0, , attr, ;
+		매수잔량, vol, vol, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock4, OutBlock4, output, occurs;
+	begin
+		가격, hoka, hoka, long, 4, 0, 0, 0, , attr, ;
+		매수잔량, vol, vol, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock5, OutBlock5, output, occurs;
+	begin
+		체결시간, time, time, varstring, 8, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		전일대비, debi, debi, long, 4, 0, 0, 0, , attr, ;
+		체결량, nowvol, nowvol, long, 4, 0, 0, 0, , attr, ;
+	end
+	OutBlock6, OutBlock6, output;
+	begin
+		호가시간, hokatime, hokatime, varstring, 8, 0, 0, 0, , , ;
+		동시호가구분, dongsi, dongsi, byte, 1, 0, 0, 0, , , ;
+		매도총잔량, medotot, medotot, long, 4, 0, 0, 0, , , ;
+		매수총잔량, mesutot, mesutot, long, 4, 0, 0, 0, , , ;
+		시간외매도총잔량, medototto, medototto, long, 4, 0, 0, 0, , , ;
+		시간외매수총잔량, mesutotto, mesutotto, long, 4, 0, 0, 0, , , ;
+		예상체결가, expectjuka, expectjuka, long, 4, 0, 0, 0, , , ;
+		예상체결량, expectvol, expectvol, long, 4, 0, 0, 0, , , ;
+		현재가, curjuka, curjuka, long, 4, 0, 0, 0, , , ;
+		경쟁대량방향구분, contest, contest, byte, 1, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <CheckBox
+            android:id="@+id/add_inter_sub_item_checker"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/add_inter_sub_item_code"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/add_inter_sub_item_checker"
+            android:padding="5dp"
+            android:textSize="15sp"
+            tools:text="name" />
+
+        <TextView
+            android:id="@+id/add_inter_sub_item_name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/add_inter_sub_item_code"
+            android:padding="5dp"
+            android:textSize="15sp"
+            tools:text="name" />
+    </RelativeLayout>
+</LinearLayout>

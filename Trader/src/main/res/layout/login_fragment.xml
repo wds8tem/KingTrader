@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/login_id_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/intro_title"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:paddingEnd="10dp"
+            android:paddingTop="20dp"
+            android:text="@string/login_id_title"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/login_id_editor"
+            android:background="@drawable/border"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            style="@style/login_edit"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_passwd_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_id_layout"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/login_passwd_title"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:paddingEnd="10dp"
+            android:paddingTop="20dp"
+            android:text="@string/login_passwd_title"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/login_passwd_editor"
+            style="@style/login_edit"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_cert_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_passwd_layout"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/login_cert_title"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:paddingEnd="10dp"
+            android:paddingTop="20dp"
+            android:text="@string/login_cert_title"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <com.wds.king.trader.ui.spinner.CertSelectSpinner
+            android:id="@+id/login_cert_spinner"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:paddingEnd="10dp"
+            android:paddingTop="20dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_cert_passwd_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_cert_layout"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/login_cert_passwd_title"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:paddingEnd="10dp"
+            android:paddingTop="20dp"
+            android:text="@string/login_cert_passwd_title"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/login_cert_passwd_editor"
+            style="@style/login_edit"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_using_cert_only_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_cert_passwd_layout"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal">
+
+        <CheckBox
+            android:id="@+id/login_using_cert_only_check"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/login_using_cert_only_title"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/login_using_cert_only_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_mock_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_using_cert_only_layout"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal">
+
+        <CheckBox
+            android:id="@+id/login_mock_check"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/login_mock_title"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/login_mock_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_mock_layout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/login_start"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:text="@string/login_start"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/login_cancel"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:text="@string/login_cancel"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
+    </LinearLayout>
+</RelativeLayout>

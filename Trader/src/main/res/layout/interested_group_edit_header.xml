@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="horizontal">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/inter_group_edit_sel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="@string/interested_group"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/inter_group_edit_add"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/add_interested_group" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

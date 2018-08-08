@@ -1,0 +1,23 @@
+BEGIN_FUNCTION_MAP
+	.DSO,현금매도,DSO100002,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=남경아,MODDATE=20151210;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		계좌식별번호, acnt_aid, acnt_aid, varstring, 15, 0, 0, 0, , , ;
+		상품구분코드, gds_acnt_tp, gds_acnt_tp, varstring, 9, 0, 0, 0, , , ;
+		비밀번호, passwd, passwd, varstring, 100, 0, 0, 0, , , ;
+		매매구분, meme_gubun, meme_gubun, varstring, 10, 0, 0, 0, , , ;
+		종목코드, jong_code, jong_code, varstring, 12, 0, 0, 0, , , ;
+		장내장외구분, jang_gubun, jang_gubun, byte, 1, 0, 0, 0, , , ;
+		주문수량, order_cnt, order_cnt, long, 4, 0, 0, 0, , , ;
+		주문가격, order_price, order_price, long, 4, 0, 0, 0, , , ;
+		주문조건(00:일반_01:IOC_02:FOK), jumun_condition, jumun_condition, varstring, 10, 0, 0, 0, , , ;
+		시스템트레이딩구분, systrd_gubun, systrd_gubun, varstring, 2, 0, 0, 0, , , ;
+		주문계획번호, ord_plan_no, ord_plan_no, varstring, 6, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		메세지, msg, msg, varstring, 1000, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

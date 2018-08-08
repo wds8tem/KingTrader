@@ -1,0 +1,39 @@
+BEGIN_FUNCTION_MAP
+	.Feed,HUGANG_SISE2,AUTO4D,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000001,CREDATE=20151211,MODIFYER=NONE;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, string, 12, 1, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		종목코드, jongcode, jongcode, string, 12, 1, 0, 0, , , ;
+		현재가, curprice, curprice, float, 4, 0, 0, 0, , attr, ;
+		시가, startprice, startprice, float, 4, 0, 0, 0, , attr, ;
+		고가, highprice, highprice, float, 4, 0, 0, 0, , attr, ;
+		저가, lowprice, lowprice, float, 4, 0, 0, 0, , attr, ;
+		매도호가, medohoka, medohoka, float, 4, 0, 0, 0, , attr, ;
+		매수호가, mesuhoka, mesuhoka, float, 4, 0, 0, 0, , attr, ;
+		전일대비, debi, debi, float, 4, 0, 0, 0, , attr, ;
+		FILLER, FILLER1, FILLER1, string, 1, 0, 0, 0, , , ;
+		매도잔량, medovol, medovol, long, 4, 0, 0, 0, , , ;
+		매수잔량, mesuvol, mesuvol, long, 4, 0, 0, 0, , , ;
+		누적거래량_주단위, volume, volume, double, 8, 0, 0, 0, , , ;
+		누적거래대금_천단위, money, money, double, 8, 0, 0, 0, , , ;
+		직전거래대금, nowmoney, nowmoney, long, 4, 0, 0, 0, , , ;
+		등락률, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		직전체결량, nowvol, nowvol, long, 4, 0, 0, 0, , attr, ;
+		상한가, upprice, upprice, float, 4, 0, 0, 0, , attr, ;
+		하한가, downprice, downprice, float, 4, 0, 0, 0, , attr, ;
+		시간, time, time, string, 8, 0, 0, 0, , , ;
+		고가시간, hightime, hightime, string, 8, 0, 0, 0, , , ;
+		저가시간, lowtime, lowtime, string, 8, 0, 0, 0, , , ;
+		장구분, jang, jang, string, 1, 0, 0, 0, , , ;
+		체결구분, qtype, qtype, string, 1, 0, 0, 0, , , ;
+		FILLER, FILLER2, FILLER2, string, 3, 0, 0, 0, , , ;
+		시가등략율, startdebirate, startdebirate, float, 4, 0, 0, 0, , , ;
+		고가등략율, highdebirate, highdebirate, float, 4, 0, 0, 0, , , ;
+		저가등략율, lowdebirate, lowdebirate, float, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP

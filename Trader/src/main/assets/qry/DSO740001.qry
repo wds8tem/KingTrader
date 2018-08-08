@@ -1,0 +1,67 @@
+BEGIN_FUNCTION_MAP
+	.DSO,후강통현재가,DSO740001,DIGSIGN=0,RECLEN=0,SERVERNO=H,VERSION=00000000,MODIFYER=김운용,MODDATE=20160713;
+	BEGIN_DATA_MAP
+	InBlock1, InBlock1, input;
+	begin
+		종목코드, jongcode, jongcode, varstring, 6, 0, 0, 0, , , ;
+		시장구분, jang, jang, long, 4, 0, 0, 0, , , ;
+		실시간지연시세여부, delay, delay, long, 4, 0, 0, 0, , , ;
+	end
+	OutBlock1, OutBlock1, output;
+	begin
+		한글종목이름, korname, korname, varstring, 64, 0, 0, 0, , , ;
+		영문종목이름, engname, engname, varstring, 64, 0, 0, 0, , , ;
+		현재가, curprice, curprice, float, 4, 0, 0, 0, , attr, ;
+		전일대비, debi, debi, float, 4, 0, 0, 0, , attr, ;
+		등락율, debirate, debirate, float, 4, 0, 0, 0, , , ;
+		거래량, volume, volume, double, 8, 0, 0, 0, , , ;
+		거래대금, money, money, double, 8, 0, 0, 0, , , ;
+		전일종가, prevlastprice, prevlastprice, float, 4, 0, 0, 0, , , ;
+		전일거래량, prevvolume, prevvolume, double, 8, 0, 0, 0, , , ;
+		동시상장한글종목이름, refkorname, refkorname, varstring, 74, 0, 0, 0, , , ;
+		동시상장종목코드, refjongcode, refjongcode, varstring, 6, 0, 0, 0, , , ;
+		동시상장현재가, refcurprice, refcurprice, float, 4, 0, 0, 0, , attr, ;
+		동시상장전일대비, refdebi, refdebi, float, 4, 0, 0, 0, , attr, ;
+		동시상장등락율, refdebirate, refdebirate, float, 4, 0, 0, 0, , , ;
+		시가, startprice, startprice, float, 4, 0, 0, 0, , attr, ;
+		시가등락율, startdebirate, startdebirate, float, 4, 0, 0, 0, , , ;
+		고가, highprice, highprice, float, 4, 0, 0, 0, , attr, ;
+		고가등락율, highdebirate, highdebirate, float, 4, 0, 0, 0, , , ;
+		저가, lowprice, lowprice, float, 4, 0, 0, 0, , attr, ;
+		저가등락율, lowdebirate, lowdebirate, float, 4, 0, 0, 0, , , ;
+		고가시간, hightime, hightime, varstring, 8, 0, 0, 0, , , ;
+		저가시간, lowtime, lowtime, varstring, 8, 0, 0, 0, , , ;
+		상한가, upprice, upprice, float, 4, 0, 0, 0, , attr, ;
+		하한가, downprice, downprice, float, 4, 0, 0, 0, , attr, ;
+		액면가, faceprice, faceprice, float, 4, 0, 0, 0, , , ;
+		기준가, standardprice, standardprice, float, 4, 0, 0, 0, , , ;
+		상장주식수, cntstocks, cntstocks, long, 4, 0, 0, 0, , , ;
+		자본금, capmoney, capmoney, double, 8, 0, 0, 0, , , ;
+		시가총액, sichong, sichong, double, 8, 0, 0, 0, , , ;
+		PER, per, per, float, 4, 0, 0, 0, , , ;
+		EPS, eps, eps, float, 4, 0, 0, 0, , , ;
+		거래정지, tradestop, tradestop, varstring, 8, 0, 0, 0, , , ;
+		배당락일, dividenddate, dividenddate, varstring, 11, 0, 0, 0, , , ;
+	end
+	OutBlock2, OutBlock2, output, occurs;
+	begin
+		최고가, highprice, highprice, float, 4, 0, 0, 0, , , ;
+		최고가일, highpriceday, highpriceday, varstring, 7, 0, 0, 0, , , ;
+		최저가, lowprice, lowprice, float, 4, 0, 0, 0, , , ;
+		최저가일, lowpriceday, lowpriceday, varstring, 7, 0, 0, 0, , , ;
+	end
+	OutBlock3, OutBlock3, output;
+	begin
+		업종코드, upcode, upcode, varstring, 3, 0, 0, 0, , , ;
+		시장편입정보, market, market, varstring, 20, 0, 0, 0, , , ;
+		주문단위, memeunit, memeunit, long, 4, 0, 0, 0, , , ;
+		외환코드, currency, currency, varstring, 4, 0, 0, 0, , , ;
+		시가총액원화, sichong_kr, sichong_kr, double, 8, 0, 0, 0, , , ;
+		호가단위, priceunit, priceunit, float, 4, 0, 0, 0, , , ;
+		대출비율, creditrate, creditrate, varstring, 10, 0, 0, 0, , , ;
+		매수불가, sellonly, sellonly, varstring, 11, 0, 0, 0, , , ;
+		예상가, expectprice, expectprice, float, 4, 0, 0, 0, , , ;
+		예상수량, expectvol, expectvol, long, 4, 0, 0, 0, , , ;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP
